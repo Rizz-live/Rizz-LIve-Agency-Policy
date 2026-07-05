@@ -134,18 +134,19 @@
   }
   .tab-btn{
     font-family:var(--font-head);
-    font-size:clamp(0.75rem,2.2vw,0.9rem);
+    font-size:clamp(0.66rem,2.6vw,0.9rem);
     font-weight:600;
     color:var(--text-dim);
     background:rgba(255,255,255,0.05);
     border:1px solid rgba(255,255,255,0.10);
-    padding:clamp(9px,2vw,12px) clamp(12px,3vw,20px);
+    padding:clamp(9px,2vw,12px) clamp(8px,2.6vw,20px);
     border-radius:12px;
     cursor:pointer;
     transition:all .3s ease;
     display:flex;
     align-items:center;
-    gap:8px;
+    justify-content:center;
+    gap:clamp(4px,1.5vw,8px);
     white-space:nowrap;
     min-height:42px;
     -webkit-tap-highlight-color:transparent;
@@ -158,11 +159,9 @@
     box-shadow:0 10px 22px rgba(242,169,60,0.3);
   }
   @media (max-width:460px){
-    .tab-btn{flex:1 1 auto; justify-content:center;}
-    .tab-btn span.label{display:none;}
-  }
-  @media (min-width:461px){
-    .tab-btn span.label{display:inline;}
+    .tab-row{gap:6px; padding:0 10px;}
+    .tab-btn{flex:1 1 0; padding-left:6px; padding-right:6px;}
+    .tab-btn .emoji{font-size:0.9em;}
   }
 
   /* ---------- STAGE / PANELS ---------- */
